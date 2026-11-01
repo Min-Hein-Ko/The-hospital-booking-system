@@ -1,195 +1,107 @@
+# CareFlow OPD — Hospital Outpatient Booking System
 
-# CareFlow OPD – Hospital Outpatient Booking System
+A responsive, clickable frontend prototype for a Hospital Outpatient Department (OPD) appointment booking system. It demonstrates the patient and administrator workflows designed for the CareFlow OPD software engineering project.
 
-A web-based Hospital Outpatient Department (OPD) Booking System designed to make hospital appointments easier, faster, and more organized for patients and hospital administrators.
+## Run the prototype
 
----
+1. Download and extract the ZIP file.
+2. Open the extracted `CareFlow_OPD_Website` folder.
+3. Keep `index.html`, `styles.css`, and `script.js` together in the same folder.
+4. Double-click `index.html` and choose Chrome, Edge, Firefox, or Safari.
 
-## 1. About the Project
+No package installation, build command, database, or internet connection is required for the local demonstration.
 
-CareFlow OPD is a Software Engineering group project developed to improve the outpatient appointment booking process in hospitals.
+If your browser blocks local-file behavior, open a terminal in this folder and run:
 
-Patients often face difficulties finding suitable doctors, checking doctor availability, and managing their appointments. These problems can lead to long waiting times and an inefficient appointment process.
+```bash
+# Windows
+py -m http.server 8000
 
-To address these challenges, CareFlow OPD provides an online platform where patients can view doctor information, check available schedules, book appointments, receive token numbers, and monitor their upcoming queue numbers.
+# macOS / Linux
+python3 -m http.server 8000
+```
 
-The system also provides an administrative interface that allows hospital staff to manage doctors, schedules, appointments, and patient queues.
+Then visit `http://localhost:8000`.
 
-## 2. Project Objectives
+## Demo accounts
 
-The main objectives of CareFlow OPD are:
+| Role | Email | Password |
+|---|---|---|
+| Patient | `patient@opd.demo` | `patient123` |
+| Admin | `admin@opd.demo` | `admin123` |
 
-- To simplify the hospital outpatient appointment booking process.
-- To allow patients to find doctors based on their medical specializations.
-- To provide information about doctors and their available schedules.
-- To allow patients to book appointments online.
-- To automatically generate token numbers for successful appointments.
-- To help patients check their upcoming queue numbers.
-- To allow patients to cancel or reschedule eligible appointments.
-- To help administrators manage doctors, schedules, appointments, and patient queues efficiently.
-- To reduce manual appointment management and improve the overall patient experience.
+Additional sample patient accounts are available in the Patient Accounts screen for testing account restrictions.
 
-## 3. System Features
+## Patient features
 
-### 3.1 Patient Interface
+- Register, sign in, and manage a patient profile.
+- Browse doctors, specialties, departments, and availability.
+- Select an available date and appointment time.
+- Optionally describe the reason for the visit / medical condition.
+- Receive a system-generated token after a successful booking.
+- View only the patient's own upcoming token number and appointment status.
+- Cancel or reschedule an eligible Waiting appointment.
+- Book a separate follow-up appointment after a Completed visit; the completed visit remains in history.
+- View and manage in-app notifications from the bell beside the search bar.
+- View the patient account status (Active or Banned).
 
-The patient interface provides the following features:
+## Admin features
 
-- **User Registration:** Create a new patient account.
-- **Login:** Access the system using registered account credentials.
-- **Profile Management:** View and update personal information.
-- **Doctor Information:** View doctor profiles, specializations, and details.
-- **Doctor Availability:** Check available doctors and their appointment schedules.
-- **Appointment Booking:** Select a doctor, available date, and time to make an appointment.
-- **Automatic Token Generation:** Receive a token number after successfully booking an appointment.
-- **Upcoming Queue Number:** View the token number associated with an upcoming appointment.
-- **Appointment Status:** Check the current status of an appointment.
-- **Appointment Cancellation:** Cancel eligible appointments.
-- **Appointment Rescheduling:** Change appointment schedules when necessary.
-- **Medical Follow-up:** Reschedule completed appointments when another medical visit is required.
+- Dashboard with appointment, token-status, doctor, and patient-account statistics.
+- Read-only appointment monitoring, filtering, and token-record viewing.
+- Patient account search and account-status visibility.
+- Ban a patient account with an optional reason and restore access.
+- Add, edit, and deactivate doctor profiles.
+- Manage doctor clinic days and available appointment times.
+- View in-app notifications from the bell beside the search bar.
 
-### 3.2 Admin Interface
+**Admin cannot manually update appointment/token statuses or call the next patient.** In the intended system architecture, the backend booking/queue workflow owns status transitions; the Admin interface is for monitoring and account/doctor administration.
 
-The admin interface provides the following features:
+## Prototype scope and limitations
 
-- **User Management:** Manage registered patient accounts.
-- **Doctor Management:** Add, update, and remove doctor information.
-- **Schedule Management:** Create and update doctors' available schedules.
-- **Appointment Management:** View and manage patient appointments.
-- **Token Queue Management:** Monitor and manage patient queues.
-- **Call Next Patient:** Call the next waiting patient according to the token sequence.
-- **Appointment Status Management:** Update appointment statuses.
-- **Queue Monitoring:** Monitor the progress of outpatient appointments.
+This is a static frontend prototype. It does not connect to a real hospital backend, database, notification service, or authentication provider. Demo data are stored in the browser's `localStorage` and are not synchronized between devices or users. Demo passwords and patient visit descriptions are not securely protected. Do not enter real patient, medical, or personal information.
 
-### 3.3 Appointment and Token Management
+Appointment statuses shown in the prototype are sample data. The `notifyAppointmentStatusUpdate` function is an integration point illustrating where a future backend event could trigger notifications. Real status validation, account restrictions, role permissions, privacy controls, and audit logs must be enforced by a server in a production implementation.
 
-CareFlow OPD uses an automatic token generation process to organize patient appointments.
-
-After successfully booking an appointment, the system generates a token number for the patient.
-
-The system supports the following appointment and token statuses:
-
-| Status | Description |
-|---|---|
-| Waiting | Patient is waiting for their turn. |
-| Called | Patient's token has been called. |
-| In Operation | Patient is currently receiving medical service. |
-| Completed | Patient's appointment has been completed. |
-| Cancelled | Patient's appointment has been cancelled. |
-
-These statuses help patients and administrators monitor appointment progress.
-
-## 4. Technologies Used
-
-The project uses the following technologies and tools:
-
-| Technology | Purpose |
-|---|---|
-| HTML5 | Creating the website structure. |
-| CSS3 | Designing the website layout and appearance. |
-| JavaScript | Implementing interactive website functionality. |
-| Git | Tracking source code changes. |
-| GitHub | Hosting the project repository and supporting team collaboration. |
-| GitHub Pages | Potentially hosting the frontend prototype online. |
-
-## 5. Project Structure
-
-The project may be organized using the following structure. Adjust the filenames to match the actual repository.
+## Project files
 
 ```text
-The-hospital-booking-system/
-│
-├── docs/
-│   └── Project documentation
-│
+CareFlow_OPD_Website/
 ├── index.html
 ├── styles.css
 ├── script.js
-│
-├── images/
-│   └── Website images and icons
-│
-├── .gitignore
 ├── README.md
-│
-└── Other project assets
+└── .gitignore
 ```
 
-### File Descriptions
+## Add this prototype to the GitHub repository
 
-- `index.html` – Main website structure and content.
-- `styles.css` – Website styling, colors, layouts, and responsive design.
-- `script.js` – Interactive features and website functionality.
-- `images/` – Images, icons, and other visual assets.
-- `docs/` – Project-related documentation.
-- `.gitignore` – Specifies files and folders that Git should ignore.
-- `README.md` – Provides project information and instructions.
+Repository: <https://github.com/jazzvarichsara-stack/The-hospital-booking-system>
 
-## 6. How to Run the Project
+1. Extract the ZIP file.
+2. Open the extracted `CareFlow_OPD_Website` folder.
+3. In the GitHub repository, open the `main` branch.
+4. Choose **Add file → Upload files**.
+5. Upload `index.html`, `styles.css`, `script.js`, and `.gitignore` to the repository root. Upload/replace `README.md` with this README if the team approves the updated description.
+6. Do not delete the existing `docs/` folder; it can remain beside the website files.
+7. Enter a commit message such as `Add CareFlow OPD frontend prototype` and select **Commit changes**.
 
-Follow these steps to run the CareFlow OPD prototype on your computer.
+After upload, the repository root should look like:
 
-### Step 1: Clone the Repository
-
-Open your terminal or command prompt and enter:
-
-```bash
-git clone https://github.com/jazzvarichsara-stack/The-hospital-booking-system.git
+```text
+The-hospital-booking-system/
+├── docs/                 # Keep the team's existing documents
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── .gitignore
 ```
 
-### Step 2: Open the Project Folder
+### Optional: publish with GitHub Pages
 
-```bash
-cd The-hospital-booking-system
-```
+After the files are in the repository root, open **Settings → Pages**. Under the build/deployment source, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, then save. GitHub Pages publishes static frontend files; it does not provide the backend services described above.
 
-### Step 3: Open the Website
+## License and project use
 
-Locate the main HTML file (for example, `index.html`).
-
-Open it using your preferred web browser.
-
-Alternatively, use Visual Studio Code with the Live Server extension to run the website locally.
-
-### Step 4: Explore the System
-
-Explore the available patient and administrator interfaces and test the implemented prototype interactions.
-
-## 7. Project Scope and Limitations
-
-CareFlow OPD is developed as an academic Software Engineering project to demonstrate the design and functionality of a Hospital Outpatient Department Booking System.
-
-The current project focuses on the frontend prototype, including website interfaces, navigation, appointment workflows, and interactive demonstrations.
-
-The prototype does not necessarily include a live backend server or database connection. Therefore, features such as real user authentication, permanent data storage, and real-time queue synchronization may require further development.
-
-## 8. Future Improvements
-
-Possible future improvements include:
-
-- Backend server and database integration.
-- Secure user authentication and authorization.
-- Real-time appointment and queue updates.
-- Email or SMS appointment notifications.
-- Online appointment confirmation.
-- Improved patient and doctor management.
-- Hospital department integration.
-- More advanced appointment reporting and analytics.
-
-## 9. Contributors
-
-This project is developed by a Software Engineering student group as part of an academic group project.
-
-**Project Name:** CareFlow OPD – Hospital Outpatient Booking System
-
-**Repository:**  
-https://github.com/jazzvarichsara-stack/The-hospital-booking-system
-
-**GitHub Repository:**  
-https://github.com/jazzvarichsara-stack/The-hospital-booking-system.git
-
----
-
-## 10. License
-
-This project is developed for educational and academic purposes as part of a Software Engineering group project.
+This prototype is provided for the CareFlow OPD academic project. Add a license only if the project team has agreed on one.
