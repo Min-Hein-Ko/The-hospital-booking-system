@@ -23,6 +23,6 @@
 <td><img src="./Check doctor and schedule.png" width="250"></td>
 <td><img src="./Check patient account.png" width="250"></td>
 <td><img src="./Check appointment.png" width="250"></td>
-<td><img src="./Edit doctor and schedule.png" width="250"></td>
+<td><img src="./Edit doctor and shedule.png" width="250"></td>
 </tr>
 
