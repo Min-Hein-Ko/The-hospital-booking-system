@@ -1,8 +1,14 @@
 <table>
 <tr>
-<th>Homepage</th>
+<th>Regisiter</th>
 <th>Login</th>
-<th>Dashboard</th>
+<th>Homepage</th>
+<th>Find a doctor</th>
+<th>Book an appointment</th>
+<th>View Token</th>
+<th>View queue number</th>
+<th>View an appointment</th>
+<th>Profile page</th>
 </tr>
 <tr>
 <td><img src="screenshots/Regisiter.png" width="250"></td>
