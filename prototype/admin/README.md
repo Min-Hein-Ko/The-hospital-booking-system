@@ -9,9 +9,9 @@
 </tr>
 </tr>
 <td><img src="./Adminlogin.png" width="250"></td>
-<td><img src="scr/eenshots/loginpage.png" width="250"></td>
-<td><img src="screenshots/Homepage.png" width="250"></td>
-<td><img src="screenshots/Homepage.png" width="250"></td>
+<td><img src="./Dashboard.png" width="250"></td>
+<td><img src="./patient account summary and appointment status.png" width="250"></td>
+<td><img src="./Check appointment.png" width="250"></td>
 </tr>
   
 <th>Check doctor and schedule</th>
@@ -20,9 +20,9 @@
 <th>Edit doctor and schedule</th>
 </tr>
 </tr>
-<td><img src="screenshots/Findadoctor.png" width="250"></td>
-<td><img src="screenshots/Bookanappointment.png" width="250"></td>
-<td><img src="screenshots/Viewtokenpage.png" width="250"></td>
-<td><img src="screenshots/Viewtokenpage.png" width="250"></td>
+<td><img src="./Check doctor and schedule.png" width="250"></td>
+<td><img src="./Check patient account.png" width="250"></td>
+<td><img src="./Check appointment.png" width="250"></td>
+<td><img src="./Edit doctor and schedule.png" width="250"></td>
 </tr>
 
