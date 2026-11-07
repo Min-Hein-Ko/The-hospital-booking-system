@@ -1,125 +1,99 @@
-# CareFlow OPD — How to Open and View the Prototype
+# CareFlow OPD — Hospital Outpatient Booking System
 
-CareFlow OPD is a static website prototype for a Hospital Outpatient Department (OPD) booking system. It is built with **HTML, CSS, and JavaScript** and is intended to be opened and viewed in a web browser. You can use **Visual Studio Code (VS Code)** to open the project and edit its files.
+CareFlow OPD is a web-based prototype designed to improve the outpatient department (OPD) appointment experience for patients and support hospital staff with clearer appointment and account administration.
 
-> This README explains how to extract, open, run, and explore the prototype. It does not require Python, Node.js, npm, or a build process.
+## Live Prototype
 
-## 1. Extract the ZIP file
+**[Open the CareFlow OPD Prototype](https://jazzvarichsara-stack.github.io/The-hospital-booking-system/)**
 
-1. Download the CareFlow OPD project ZIP.
-2. In Windows File Explorer, right-click the ZIP file.
-3. Select **Extract All...** and choose a folder.
-4. Open the extracted `CareFlow_OPD_VSCode_Project` folder.
+> **Deployment status:** This is the intended GitHub Pages address for the project. The link becomes available after the prototype files and deployment workflow have been pushed to the repository, GitHub Pages has been configured to use GitHub Actions, and the deployment workflow has completed successfully. The URL has not been independently confirmed as live yet.
 
-**Important:** Do not open `index.html` from inside the ZIP preview. Extract the whole folder first so the HTML, CSS, and JavaScript files stay together.
+## The Problem We Aim to Solve
 
-## 2. Open the project in Visual Studio Code
+Patients visiting an outpatient department may spend unnecessary time contacting or visiting the hospital to find an appropriate doctor, check consultation schedules, or arrange an appointment. Unclear appointment information and limited visibility of queue progress can also make hospital visits less predictable and contribute to avoidable waiting and crowding.
 
-1. Open **Visual Studio Code**.
-2. Select **File → Open Folder...**.
-3. Choose the extracted `CareFlow_OPD_VSCode_Project` folder.
-4. In the Explorer panel, confirm that you can see `index.html`, `styles.css`, and `script.js`.
+CareFlow OPD aims to reduce these difficulties by making doctor information, appointment availability, online booking, and personal token information easier to access. Patients can plan their visit with their appointment details and token status instead of relying only on in-person enquiries. The system is intended to reduce avoidable waiting and time spent arranging appointments; it does not guarantee that clinical consultation queues will be eliminated.
 
-## 3. Run the prototype with Live Server (recommended)
+## Project Objectives
 
-1. In VS Code, open the **Extensions** panel (`Ctrl + Shift + X`).
-2. Search for **Live Server** by Ritwick Dey and install it.
-3. Open `index.html` in the editor.
-4. Right-click inside the editor and choose **Open with Live Server**. You can also click **Go Live** in the VS Code status bar.
-5. Your default browser should open the CareFlow OPD website.
+- Help patients find doctors by specialty and view available appointment schedules.
+- Allow patients to book an available appointment online and receive a system-generated token.
+- Prevent duplicate booking of an unavailable doctor, date, and time slot.
+- Let patients review their own upcoming appointment, token number, and appointment status.
+- Support appointment cancellation and rescheduling, including booking a separate follow-up after a completed visit.
+- Give administrators tools to maintain doctor information and schedules, monitor appointment data, and manage patient account access.
+- Keep appointment and token status changes under system/backend control rather than allowing administrators to manually edit status values.
+- Provide in-app notifications for patients and administrators.
 
-When you edit and save the HTML, CSS, or JavaScript files, Live Server refreshes the browser page.
+## Main Features
 
-## 4. Open the prototype without Live Server
+### Patient
 
-After extracting the ZIP, you can double-click `index.html` to open the website in your browser. Keep these three files in the same folder:
-
-- `index.html`
-- `styles.css`
-- `script.js`
-
-There is also a one-file fallback named `CareFlow_OPD_Standalone.html`. Double-click that file to open the standalone version; it contains its own CSS and JavaScript and does not need the separate files.
-
-## 5. Demo login accounts
-
-Use either the demo buttons on the sign-in screen or enter these credentials:
-
-| Role | Email | Password |
-|---|---|---|
-| Patient | `patient@opd.demo` | `patient123` |
-| Admin | `admin@opd.demo` | `admin123` |
-
-The prototype also includes sample patient accounts that can be viewed from the Admin **Patient Accounts** page.
-
-## 6. What to explore
-
-### Patient portal
-
-- Create a patient account or sign in with the demo patient account.
-- Browse doctors, specialties, departments, and available schedules.
-- Select a doctor, appointment date, and available time.
-- Optionally enter a reason for the visit or describe a medical condition when booking.
-- Confirm the booking and view the generated token number.
-- View your own upcoming token and appointment status.
+- Register and sign in to a patient account.
+- Browse doctors, specializations, departments, and available schedules.
+- Book an appointment and receive an automatically generated token number.
+- Add an optional reason for the visit or description of the patient's condition when booking.
+- View personal appointment history, upcoming token number, and appointment status.
 - Cancel or reschedule eligible appointments.
-- Book a separate follow-up appointment after a completed visit; the previous completed visit remains in the history.
-- Open the notification bell beside the search bar to view and manage notifications.
-- View your account status on the patient side.
+- Book a follow-up appointment without replacing the record of a completed appointment.
+- View account status and receive notifications about relevant account and appointment events.
 
-### Admin workspace
+### Administrator
 
-- View dashboard statistics for appointments, token statuses, doctors, and patient accounts.
-- Search and view appointment and token records. Appointment and token statuses are read-only for Admin.
-- Open **Patient Accounts** to view account statuses, ban an account, or restore access.
-- Add, edit, or deactivate doctor profiles.
-- Manage doctor clinic days and available time slots.
-- Open the notification bell beside the search bar to view and manage notifications.
+- View an operational dashboard with appointment, queue, doctor, and patient-account summaries.
+- View and search appointment and token records without manually changing appointment or token statuses.
+- Add, edit, and deactivate doctor information.
+- Manage doctor schedules and appointment availability.
+- View patient accounts and their account status.
+- Ban or restore patient account access, with an optional reason for a restriction.
+- Manage the administrator's own profile information.
+- Receive and manage in-app notifications.
 
-The **Resources** section and M2 requirement-map link have been removed from both Patient and Admin navigation.
+## Appointment and Token Status Control
 
-## 7. How the demo data works
+Appointment and token statuses are intended to be controlled by the system/backend workflow. The administrator interface is for viewing operational data and managing hospital information and patient account access; it does not provide controls for manually selecting appointment statuses.
 
-The prototype saves sample changes in the browser's local storage when it is available. This means changes such as bookings, account restrictions, and notifications usually remain in the same browser after refreshing the page. They are not shared with another browser, computer, or user session.
+The prototype demonstrates these status labels:
 
-To start again with the original sample data, clear the site's local storage for the local CareFlow address in your browser's Developer Tools, then reload the page. This will reset demo bookings, account changes, and notifications saved in that browser.
+- `Waiting`
+- `Called`
+- `In Operation`
+- `Completed`
+- `Cancelled`
 
-## 8. Troubleshooting
+The final backend implementation must validate permitted status transitions and record the event that causes each transition.
 
-**The browser shows a blank page or says `styles.css` or `script.js` is missing**
+## Technology
 
-- Make sure you extracted the complete ZIP.
-- Make sure `index.html`, `styles.css`, and `script.js` are in the same folder.
-- Open `index.html` from the extracted folder, not from the ZIP preview.
-- In VS Code, try **Open with Live Server**.
-- Refresh the browser with `Ctrl + Shift + R`.
+- **HTML5** — page structure
+- **CSS3** — layout, styling, and responsive presentation
+- **JavaScript** — prototype interactions and demonstration logic
+- **GitHub Pages** — intended static website hosting
 
-**The page says JavaScript is required**
+## Team Members and Contributions
 
-Enable JavaScript in your browser and reload the page.
+| No. | Name | Related Work / Contribution |
+|---:|---|---|
+| 1 | Aung Phone Thant | M1, M2, Functional Requirements (FR), Non-Functional Requirements (NFR), Use Cases |
+| 2 | Yoon Yadanar MyintHtay | M1, M2, Specification, UI |
+| 3 | Apichaya Somrit | M1, M2, Data Model, Screen List, Traceability Summary (Golden Thread) in the SRS |
+| 4 | Min Hein Ko | M1, M2, Prototype, Diagrams, README |
+| 5 | Varissara Kitiphatphiboon | M1, M2, UI, Process and Team Coordination |
 
-**The standalone version works but `index.html` does not**
+## Project Scope
 
-Check that `styles.css` and `script.js` have not been moved or renamed. The standalone file is provided as a backup viewing option.
+The prototype focuses on outpatient doctor discovery, appointment booking, token information, appointment management, doctor schedules, administrator monitoring, patient account access, and notifications.
 
-**The demo data looks different from the original sample**
+The following capabilities are outside the current project scope: online payment or billing, online medical consultation or video calls, diagnosis or treatment recommendations, prescription management, electronic medical records management, emergency or ambulance services, insurance claims, online pharmacy or medicine ordering, and integration with external hospital systems.
 
-The browser may have saved earlier test changes. Clear the local CareFlow site's local storage and reload to restore the original demo data.
+## Prototype Limitations and Data Privacy
 
-## 9. Project files
+CareFlow OPD is an academic frontend prototype, not a production hospital service. Its demonstration data is stored locally in the browser and is not synchronized through a shared backend or database. Account login and role behavior are simulated for demonstration purposes. A public static website must not be used to store or process real patient data.
 
-```text
-CareFlow_OPD_VSCode_Project/
-├── index.html                    # Main website page
-├── styles.css                    # Website layout, colors, and responsive design
-├── script.js                     # Demo data and interactive behavior
-├── CareFlow_OPD_Standalone.html  # One-file fallback version
-├── README.md                     # Instructions for opening and viewing the prototype
-├── OPEN_ME_FIRST.txt             # Short quick-start instructions
-└── .gitignore                    # Ignore rules for development files
-```
+Use demonstration accounts and sample information only. Do not enter real names, contact details, passwords, medical conditions, or other confidential patient information. A production system would require a properly secured backend, database, authentication, authorization, audit logging, and privacy controls before clinical use.
 
-## 10. Prototype limitations and privacy
+---
 
-This is a **frontend demonstration only**. It does not connect to a real hospital backend, production database, real authentication service, or real-time notification service. Appointment and token status behavior is simulated for demonstration; the intended design is that a real backend controls status transitions while Admin views operational records without manually editing those statuses.
-
-Do not enter real patient, medical, or personal information. Demo credentials and browser storage are not secure. A production system requires server-side authentication, authorization, secure data storage, audit logs, and approved clinical workflows.
+**Project:** The Hospital Booking System — CareFlow OPD  
+**Repository:** [The-hospital-booking-system](https://github.com/jazzvarichsara-stack/The-hospital-booking-system)  
+**Live prototype address:** [CareFlow OPD on GitHub Pages](https://jazzvarichsara-stack.github.io/The-hospital-booking-system/)
