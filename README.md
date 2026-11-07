@@ -4,9 +4,9 @@ CareFlow OPD is a web-based prototype designed to improve the outpatient departm
 
 ## Live Prototype
 
-**[Open the CareFlow OPD Prototype](https://jazzvarichsara-stack.github.io/The-hospital-booking-system/)**
+**[Open the CareFlow OPD Prototype](https://min-hein-ko.github.io/The-hospital-booking-system/)**
 
-> **Deployment status:** This is the intended GitHub Pages address for the project. The link becomes available after the prototype files and deployment workflow have been pushed to the repository, GitHub Pages has been configured to use GitHub Actions, and the deployment workflow has completed successfully. The URL has not been independently confirmed as live yet.
+The prototype is published through GitHub Pages and can be opened from a web browser on desktop computers, tablets, and mobile devices.
 
 ## The Problem We Aim to Solve
 
@@ -68,7 +68,7 @@ The final backend implementation must validate permitted status transitions and 
 - **HTML5** — page structure
 - **CSS3** — layout, styling, and responsive presentation
 - **JavaScript** — prototype interactions and demonstration logic
-- **GitHub Pages** — intended static website hosting
+- **GitHub Pages** — static website hosting
 
 ## Team Members and Contributions
 
@@ -95,5 +95,5 @@ Use demonstration accounts and sample information only. Do not enter real names,
 ---
 
 **Project:** The Hospital Booking System — CareFlow OPD  
-**Repository:** [The-hospital-booking-system](https://github.com/jazzvarichsara-stack/The-hospital-booking-system)  
-**Live prototype address:** [CareFlow OPD on GitHub Pages](https://jazzvarichsara-stack.github.io/The-hospital-booking-system/)
+**Repository:** [The-hospital-booking-system](https://github.com/Min-Hein-Ko/The-hospital-booking-system)  
+**Live prototype:** [CareFlow OPD on GitHub Pages](https://min-hein-ko.github.io/The-hospital-booking-system/)
