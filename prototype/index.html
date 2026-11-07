@@ -6,24 +6,12 @@
   <meta name="theme-color" content="#123c59">
   <meta name="description" content="CareFlow OPD outpatient appointment booking and queue prototype.">
   <title>CareFlow OPD · Hospital Booking System</title>
-  <link rel="stylesheet" href="./styles.css" onerror="window.showCareFlowAssetError && window.showCareFlowAssetError('styles.css')">
+  <link rel="stylesheet" href="./style.css">
   <style>
     .startup-message{min-height:100vh;display:grid;place-items:center;padding:24px;background:#f5f8fa;font-family:Arial,sans-serif;color:#172b3a}
     .startup-card{width:min(560px,100%);padding:28px;border:1px solid #e3ebef;border-radius:18px;background:#fff;box-shadow:0 14px 35px rgba(25,54,73,.08)}
     .startup-card h1{font-size:23px;margin:10px 0}.startup-card p{color:#6b7f8d;line-height:1.6}.startup-card code{background:#f1f5f6;padding:2px 5px;border-radius:4px}
   </style>
-  <script>
-    window.showCareFlowAssetError = function (asset) {
-      var app = document.getElementById('app');
-      if (!app) return;
-      app.innerHTML = '<main class="startup-message"><section class="startup-card"><div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#087f8c">CAREFLOW OPD</div><h1>Website files are missing</h1><p>The browser could not load <code>' + asset + '</code>. Extract the complete ZIP first, then keep <code>index.html</code>, <code>styles.css</code>, and <code>script.js</code> together in the same folder.</p><p>Do not open <code>index.html</code> from inside the ZIP preview.</p></section></main>';
-    };
-    window.addEventListener('error', function (event) {
-      if (event.target && event.target.tagName === 'SCRIPT' && event.target.src && event.target.src.indexOf('script.js') !== -1) {
-        window.showCareFlowAssetError('script.js');
-      }
-    }, true);
-  </script>
 </head>
 <body>
   <div id="app">
@@ -31,7 +19,7 @@
       <section class="startup-card">
         <div style="font-size:12px;font-weight:800;letter-spacing:.1em;color:#087f8c">CAREFLOW OPD</div>
         <h1>Loading CareFlow OPD…</h1>
-        <p>If this message remains visible, make sure all three website files are in the same extracted folder and JavaScript is enabled.</p>
+        <p>If this message remains visible, check that <code>script.js</code> is in the same folder as <code>index.html</code> and that JavaScript is enabled.</p>
       </section>
     </main>
   </div>
@@ -40,6 +28,6 @@
   </noscript>
   <div id="modal-root"></div>
   <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
-  <script src="./script.js" defer onerror="window.showCareFlowAssetError && window.showCareFlowAssetError('script.js')"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
