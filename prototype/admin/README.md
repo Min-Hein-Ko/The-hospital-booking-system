@@ -1,23 +1,18 @@
 <table>
 <tr>
-
 <th>AdminLogin</th>
 <th>Dashboard</th>
 <th>Patient account summary and appointment status</th>
-
 </tr>
 </tr>
-
 <td><img src="./Adminlogin.png" width="250"></td>
 <td><img src="./Dashboard.png" width="250"></td>
 <td><img src="./patient account summary and appointment status.png" width="250"></td>
 
 </tr>
-
 <th>Check appointment</th>
 <th>Check doctor and schedule</th>
 <th>Check patient account</th>
-
 </tr>
 </tr>
 <td><img src="./Check appointment.png" width="250"></td>
@@ -25,13 +20,11 @@
 <td><img src="./Check patient account.png" width="250"></td>
 
 </tr>
-
 <th>Check appointment</th>
 <th>Edit doctor and schedule</th>
 <th>Admin Profile</th>
 </tr>
 </tr>
-
 <td><img src="./Check appointment.png" width="250"></td>
 <td><img src="./Edit doctor and shedule.png" width="250"></td>
 <td><img src="./Admin profile.png" width="250"></td>
