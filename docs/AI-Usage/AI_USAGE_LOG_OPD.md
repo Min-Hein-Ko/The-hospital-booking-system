@@ -9,8 +9,6 @@
 | AI tool identified | **OpenAI ChatGPT** |
 | Record prepared | 08 November 2026 |
 
-> **Tool disclosure:** The AI tool identified in this log is OpenAI ChatGPT. No other AI tools are listed because their use has not been confirmed. Add another tool only if the team verifies that it was actually used.
-
 ---
 
 ## 1. Purpose and disclosure
@@ -28,8 +26,6 @@ AI-generated suggestions were treated as drafts or recommendations. The team rev
 | **M1 - Project idea and initial definition** | Helped brainstorm and compare possible project directions; suggested ways to clarify the OPD problem statement, project purpose, scope, and document structure. | The team selected the hospital OPD booking topic, supplied the project context, decided the scope, and revised the wording to reflect the group's intended system. The final content was checked for relevance and consistency. |
 | **M2 - Requirements and analysis** | Helped organize requirement sections, improve wording, and explain examples of functional and non-functional requirements, user stories, acceptance criteria, user/admin roles, appointment booking, and token-queue features. | The team determined which requirements belonged in the system and adjusted them to match the agreed workflow. Members reviewed requirements for clarity, feasibility, duplication, and consistency with the project scope before including them. |
 | **M3 - Design and project refinement** | Provided writing and review support where needed, including explanations of design concepts, suggestions for organizing sections, and feedback on consistency between requirements and the proposed system design. | The team supplied the project-specific decisions and incorporated only relevant suggestions. Members reviewed the final M3 material against the system features and earlier project documentation. ChatGPT was not treated as the authority for technical or operational decisions. |
-
-**Important distinction:** AI assistance with wording, outlines, explanations, or review does not mean that AI authored an entire deliverable. The project-specific content and final decisions remained the responsibility of the student team.
 
 ## 3. AI usage record: diagrams, prototype, and presentation
 
