@@ -72,13 +72,13 @@ The final backend implementation must validate permitted status transitions and 
 
 ## Team Members and Contributions
 
-| No. | Name | Related Work / Contribution |
-|---:|---|---|
-| 1 | Aung Phone Thant | M1, M2, Functional Requirements (FR), Non-Functional Requirements (NFR), Use Cases |
-| 2 | Yoon Yadanar MyintHtay | M1, M2, Specification, UI |
-| 3 | Apichaya Somrit | M1, M2, Data Model, Screen List, Traceability Summary (Golden Thread) in the SRS |
-| 4 | Min Hein Ko | M1, M2, Prototype, Diagrams, README |
-| 5 | Varissara Kitiphatphiboon | M1, M2, UI, Process and Team Coordination |
+| No. | Student ID | Name | Related Work / Contribution |
+|---:|---|---|---|
+| 1 | 6931503092 | Aung Phone Thant | M1, M2, Functional Requirements (FR), Non-Functional Requirements (NFR), Use Cases |
+| 2 | 6931503098 | Yoon Yadanar MyintHtay | M1, M2, Specification, UI |
+| 3 | 6931503085 | Apichaya Somrit | M1, M2, Data Model, Screen List, Traceability Summary (Golden Thread) in the SRS |
+| 4 | 6931503093 | Min Hein Ko | M1, M2, Prototype, Diagrams, README |
+| 5 | 6931503116 | Varissara Kitiphatphiboon | M1, M2, UI, Process and Team Coordination |
 
 ## Project Scope
 
